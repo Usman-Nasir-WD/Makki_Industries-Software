@@ -1,0 +1,67 @@
+/* Reset Styles */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.text-yellow{
+    color: rgb(243, 243, 0);
+}
+
+.text-orangered {
+    color: orangered;
+}
+
+.text-peach{
+    color: rgb(255, 183, 119);
+}
+
+.mar-left{
+    margin-left: 20px
+}
+
+h2{
+    background: linear-gradient(0deg, darkblue , black);
+    color: white;
+    border: 3px dashed white;
+    text-align: center;
+    padding: 12px;
+    margin: 20px;
+}
+
+
+.set_Title{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    background: linear-gradient(0deg, darkgreen , black);
+    color: white;
+    margin: 5px;
+    margin-bottom: 20px;
+    padding: 10px;
+    cursor: cell;
+    /* font-family: 'Times New Roman', Times, serif; */
+}
+
+.h1_Style{
+    /* background: linear-gradient(0deg, darkblue , black); */
+    background: linear-gradient(0deg, darkred , black);
+    color: white;
+    border: 5px dashed white;
+    text-align: center;
+    padding: 20px;
+    margin: 80px 0px 50px 0px;
+}
+
+.search-input{
+    border: 8px double black;
+    padding-right: 30%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.no-name-error{
+    font-size: 1.5rem;
+    font-weight: bolder;
+    margin-bottom: 50px;
+}
