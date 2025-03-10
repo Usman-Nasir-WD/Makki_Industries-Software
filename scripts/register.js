@@ -29,11 +29,12 @@ let myWidget = cloudinary.createUploadWidget({
       myWidget.open();
     }, false);  
 
-
+    
 
 form.addEventListener('submit',(e)=>{
      e.preventDefault();
     createUserWithEmailAndPassword(auth, email.value, password.value)
+
   .then( async (userCredential) => {
     const user = userCredential.user;
     console.log(user.uid);
@@ -51,7 +52,6 @@ form.addEventListener('submit',(e)=>{
     catch (e) {
         console.error("Error adding document: ", e);
     }
-
 
   })
   .catch((error) => {

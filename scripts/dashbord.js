@@ -146,7 +146,6 @@ searchInput.addEventListener("input", (e) => {
 
 
 
-
 // Function to render the user blo
 async function renderloginUserblogs(userData) {
   cardContainer.innerHTML = "";  // Clear previous posts before rendering
@@ -196,7 +195,6 @@ async function renderloginUserblogs(userData) {
 
 
 
-
 // Handle editing the post
 
 async function handleEdit(e) {
@@ -220,7 +218,6 @@ async function handleEdit(e) {
 }
 
 
-
 // Handle deleting the post
 async function handleDelete(e) {
   const postId = e.target.getAttribute('data-id');
@@ -233,3 +230,4 @@ async function handleDelete(e) {
     console.error("Error deleting document: ", e);
   }
 }
+

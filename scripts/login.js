@@ -33,13 +33,15 @@ googleBtn.addEventListener("click", () => {
  
    signInWithPopup(auth, provider)
    .then((result) => {
-    const credential = GoogleAuthProvider.credentialFromResult(result);
-    const token = credential.accessToken;
-    const user = result.user;
-    window.location = "index.html";
-}).catch((error) => {
-    const errorMessage = error.message;
-    console.log(errorMessage);
-});
+        const credential = GoogleAuthProvider.credentialFromResult(result);
+        const token = credential.accessToken;
+        const user = result.user;
+        window.location = "index.html";
+    })
+    .catch((error) => {
+        const errorMessage = error.message;
+        console.log(errorMessage);
+    });
  
 })
+

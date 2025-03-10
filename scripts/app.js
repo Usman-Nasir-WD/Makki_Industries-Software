@@ -52,7 +52,6 @@ async function getDatafromfirebasedb() {
 }
 
 
-
 async function getBlogsDataFromFirebaseDB() {
   const q = query(collection(db, "usersblog"), orderBy("createdAt", "desc"));
   const querySnapshot = await getDocs(q);
@@ -69,7 +68,6 @@ async function getBlogsDataFromFirebaseDB() {
 
   return blogsarray;
 }
-
 
 
 function renderBlogOnScreen(blogs) {
@@ -178,7 +176,6 @@ logbtn.addEventListener("click", (e) => {
       console.log(error);
     });
 });
-
 
 
 // Mode button function
