@@ -1,0 +1,132 @@
+/* Reset Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}    
+
+body {
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Blog Section */
+.blog-section .container {
+    max-width: 1200px;
+}    
+
+/* Card Hover Effect */
+.card {
+    transition: transform 0.3s ease-in-out;
+    padding-right: 5%;
+    margin-top: 5px;
+}    
+
+.card:hover {
+    transform: scale(1.05);
+}    
+
+/* Navbar Brand Styling */
+.set_logo{
+    margin: 0px 0px 0px 50px;
+    padding: auto;
+    cursor: none;
+}    
+
+.set_logo:hover {
+    transform: scale(1.16);
+}    
+
+/* Logout Button */
+.logout-btn {
+    transition: all 0.3s ease-in-out;
+    border-width: 2px;
+    font-size: 14px; /* Adjusted for smaller screens */
+    padding: 8px 15px; /* Padding for better touch experience */
+}    
+
+.logout-btn:hover {
+    color: #fff;
+    border-color: #dc3545;
+    box-shadow: 0 4px 8px rgba(220, 53, 69, 0.3);
+    transform: scale(1.05);
+}    
+
+/* Responsive Navbar */
+@media (max-width: 768px) {
+    .navbar-nav {
+        text-align: center;
+    }    
+
+    .navbar-toggler {
+        border: none; /* Remove default border */
+    }    
+
+    #login-user {
+        flex-direction: column;
+        gap: 10px;
+    }    
+
+    .logout-btn {
+        width: 100%; /* Full width for better touch usability */
+    }    
+}    
+
+.dark-mode {
+    background-color: #121212 !important;
+    color: white !important;
+}    
+
+.dark-mode .navbar {
+    background-color: #1e1e1e !important;
+}    
+
+.dark-mode .nav-link {
+    color: white !important;
+}    
+
+.dark-mode .bg-light {
+    background-color: #1e1e1e !important;
+}    
+
+.dark-mode #dashboard-link {
+    background-color: #0d6efd !important; /* Bootstrap primary color */
+    color: white !important;
+    border: 1px solid #0d6efd !important;
+}
+
+.dark-mode #dashboard-link:hover {
+    background-color: #0b5ed7 !important; /* Darker blue on hover */
+} 
+
+/* Responsive Card Layout */
+@media (max-width: 576px) {
+    #card-img {
+        aspect-ratio: 1/1; /* More square-like for small screens */
+    }
+}
+
+/* Blog Card Title */
+.card-title {
+    font-weight: bold; /* Ensures the title is bold */
+}
+
+/* Phone Number Styling */
+.card-text.fw-bold {
+    font-weight: bold;
+    cursor:col-resize;
+    color: #007bff;  /* Blue color for phone number */
+}
+
+
+#text-yellow{
+    color: rgb(243, 243, 0);
+}
+
+#text-orangered {
+    color: orangered;
+}
+
+#text-peach{
+    color: rgb(255, 183, 119);
+}
+
