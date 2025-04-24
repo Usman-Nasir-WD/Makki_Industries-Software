@@ -4,6 +4,7 @@ import { initializeApp } from "https://www.gstatic.com/firebasejs/11.3.1/firebas
 import { getAuth } from "https://www.gstatic.com/firebasejs/11.3.1/firebase-auth.js";
 import { getFirestore } from "https://www.gstatic.com/firebasejs/11.3.1/firebase-firestore.js";
 
+
 const firebaseConfig = {
     apiKey: "AIzaSyBa7w_XpfIoWcriPJGs8tEMsr18lf_o7Rc",
     authDomain: "makki-industries.firebaseapp.com",

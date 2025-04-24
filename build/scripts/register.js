@@ -30,7 +30,6 @@ let myWidget = cloudinary.createUploadWidget({
     }, false);  
 
     
-
 form.addEventListener('submit',(e)=>{
      e.preventDefault();
     createUserWithEmailAndPassword(auth, email.value, password.value)

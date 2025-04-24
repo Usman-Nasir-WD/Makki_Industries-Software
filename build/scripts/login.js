@@ -4,10 +4,10 @@ import { auth } from "./firebaseconfig.js";
 
 const provider = new GoogleAuthProvider();
 
-
 const form = document.querySelector('#form');
 const email = document.querySelector('#loginEmail');
 const password = document.querySelector('#loginPassword');
+
 
 form.addEventListener('submit', event => {
     event.preventDefault()

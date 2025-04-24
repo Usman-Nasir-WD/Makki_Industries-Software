@@ -25,10 +25,11 @@
 h2{
     background: linear-gradient(0deg, darkblue , black);
     color: white;
-    border: 3px dashed white;
+    /* border: 3px dashed white; */
     text-align: center;
-    padding: 12px;
+    padding: 20px;
     margin: 20px;
+    cursor: -webkit-grabbing;
 }
 
 .set_Title{
@@ -43,13 +44,13 @@ h2{
 }
 
 .h1_Style{
-    /* background: linear-gradient(0deg, darkblue , black); */
     background: linear-gradient(0deg, darkred , black);
     color: white;
-    border: 5px dashed white;
+    /* border: 5px dashed white; */
     text-align: center;
     padding: 20px;
-    margin: 80px 0px 50px 0px;
+    margin: 100px 0px 60px 0px;
+    cursor: -webkit-grabbing;
 }
 
 .search-input{
@@ -64,4 +65,3 @@ h2{
     font-weight: bolder;
     margin-bottom: 50px;
 }
-

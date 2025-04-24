@@ -6,70 +6,101 @@
     <link rel="icon" type="image/svg+xml" href="./assets/Papa Simple.png" />
     <title>Dashboard Page</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="./style/dashbord.css">
+    <link rel="stylesheet" 
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
 </head>
 <body>
 
-    <h2>This is a new page. For a new Patients.</h2>
+    <h2  id="first-head">
+        This Is A New Page. For A New Patients...
+    </h2>
 
-    <div class="container mt-5">
+    <div class="container mt-5" data-aos="zoom-in" data-aos-easing="linear" data-aos-duration="3000">
+        
         <div class="card shadow-sm mx-auto p-3" style="max-width: 500px;">
-            <h4 class="text-center set_Title">Create A New Page.</h4>
+        
+            <h4 class="text-center set_Title" id="page-head">Create A New Page.</h4>
             
             <!-- Input Form -->
+        
             <form id="form">
+        
                 <div class="mb-2">
-                    <label for="title" class="form-label">Full Name</label>
-                    <input type="text" class="form-control" id="title" placeholder="Enter a Full Name ᯓ" required>
+                    <label for="title" class="form-label nameLabel">Full Name</label>
+                    
+                    <input type="text" class="form-control nameInput" id="title" placeholder="Enter a Full Name ᯓ" required>
                 </div>
+        
                 <div class="mb-2">
-                    <label for="title" class="form-label">Age</label>
-                    <input type="number" class="form-control" id="age" placeholder="Enter a Current Age... ⏳" required>
+                    <label for="title" class="form-label ageLabel">Age</label>
+                   
+                    <input type="number" class="form-control ageInput" id="age" placeholder="Enter a Current Age... ⏳" required>
                 </div>
+                
                 <div class="mb-2">
-                    <label for="description" class="form-label">Medicines</label>
-                    <textarea class="form-control" id="description" rows="6" placeholder="Which Medicine is suitable for this Patient..." required></textarea>
+                    <label for="description" class="form-label madicinesLabel">Medicines</label>
+                
+                    <textarea class="form-control madicinesInput" id="description" rows="6" placeholder="Which Medicine is suitable for this Patient..." required></textarea>
                 </div>
+
                 <br>
-                <div class="mb-2">
+                
+                <div class="mb-2"> 
                     <div class="d-flex justify-content-between">
+                    
                         <div class="mb-2">
-                            <label for="days" class="form-label">How many Days 🗓️📅 ?</label>
-                            <input type="number" class="form-control" id="days" placeholder="Enter a Days...">
+                            <label for="days" class="form-label dayLabel">How many Days 🗓️📅 ?</label>
+                            <input type="number" class="form-control dayInput" id="days" placeholder="Enter a Days...">
                         </div>
+                    
                         <div>
-                            <label for="quantity" class="form-label">How many Purya 🍚 ?</label>
-                            <input type="number" class="form-control" id="purya" placeholder="Enter a quantity...">
+                            <label for="quantity" class="form-label puryaLabel">How many Purya 🍚 ?</label>
+                            <input type="number" class="form-control puryaInput" id="purya" placeholder="Enter a quantity...">
                         </div>
+                    
                     </div>
                 </div>
+                
                 <br>
+                
                 <div class="mb-2">
                     <div class="d-flex justify-content-between">
+                        
                         <div>
-                            <label for="bottle" class="form-label">Which bottle for Syrup 🍶 ?</label>
-                            <input type="number" class="form-control" id="bottle" placeholder="Enter a bottle Aunce...">
+                            <label for="bottle" class="form-label bottleLabel">Which bottle for Syrup 🍶 ?</label>
+                            <input type="number" class="form-control bottleInput" id="bottle" placeholder="Enter a bottle Aunce...">
                         </div>
+                        
                         <div class="mar-left">
-                            <label for="quantity" class="form-label">Which box for Majoon 🔳 ?</label>
-                            <input type="number" class="form-control" id="majoon" placeholder="Enter a box Tola...">
+                            <label for="quantity" class="form-label majoonLabel">Which box for Majoon 🔳 ?</label>
+                            <input type="number" class="form-control majoonInput" id="majoon" placeholder="Enter a box Tola...">
                         </div>
+                    
                     </div>
                 </div>
+
                 <br>
+                
                 <div class="mb-2">
-                    <label for="price" class="form-label">Total Price</label>
-                    <input type="number" class="form-control" id="price" placeholder="💲 Enter a Medicine Price">
+                    <label for="price" class="form-label priceLabel">Total Price</label>
+                
+                    <input type="number" class="form-control priceInput" id="price" placeholder="💲 Enter a Medicine Price">
                 </div>                
+                
                 <div class="mb-2">
-                    <label for="Number" class="form-label">Contact Number</label>
-                    <input class="form-control" id="contactNumber" placeholder="📲 Enter a Phone Number" required>
+                    <label for="Number" class="form-label numberLabel">Contact Number</label>
+                
+                    <input class="form-control numberInput" id="contactNumber" placeholder="📲 Enter a Phone Number" required>
                 </div>
 
                 <!-- 📷 -->
                 <br>
 
-                <div class="d-flex justify-content-center align-items-center">
+                <div class="d-flex justify-content-center align-items-center animate__animated 
+                animate__fadeIn animate__delay-3s animate__infinite animate__slower">
+
                     <button class="btn btn-primary btn-sm" id="addCard">✈︎ Created it Successfully. ✈︎</button>
                 </div>
                 
@@ -79,10 +110,13 @@
         <!-- Display Posts -->
         <!-- Your existing code... -->
 
-        <h1 class="h1_Style">Your all patients history.</h1>
+        <h1 class="h1_Style" data-aos="flip-up"  data-aos-easing="linear" data-aos-duration="2000">
+            Your All Patients History...
+        </h1>
 
         <!-- Search Bar -->
-        <div class="mb-5 text-center">
+        <div class="mb-5 text-center animate__animated animate__zoomInDown animate__delay-3s 
+        animate__repeat-2 animate__slower">
             <input type="text" id="search-bar" class="form-control search-input" placeholder="🔎 Enter a Patient name..." style="width: 50%; margin: 0 auto;">
         </div>
 
@@ -96,12 +130,22 @@
 
         <!-- <a href="./index.html">Go back home page</a> -->
     </div>
+
     
+    
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <script>
+        AOS.init();
+    </script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.7/gsap.min.js" integrity="sha512-f6bQMg6nkSRw/xfHw5BCbISe/dJjXrVGfz9BSDwhZtiErHwk7ifbmBEtF9vFW8UNIQPhV2uEFVyI/UHob9r7Cw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     
     <script src="https://upload-widget.cloudinary.com/latest/global/all.js" type="text/javascript"></script>
     
     <script type="module" src="./scripts/dashbord.js"></script>
+    
 </body>
 </html>

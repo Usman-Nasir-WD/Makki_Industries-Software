@@ -36,6 +36,7 @@ onAuthStateChanged(auth, async (user) => {
   else { window.location = "login.html";}
 });
 
+
 async function getDatafromfirebasedb() {
   let user = null;
   const q = query(
@@ -163,6 +164,7 @@ function renderBlogOnScreen(blogs) {
 renderBlogOnScreen(blogsarray);
 
 
+
 logbtn.addEventListener("click", (e) => {
   e.preventDefault();
   signOut(auth)
@@ -179,35 +181,59 @@ logbtn.addEventListener("click", (e) => {
 
 
 // Mode button function
-    document.addEventListener("DOMContentLoaded", function () {
-        const darkModeToggle = document.getElementById("dark-mode-toggle");
-        const body = document.body;
-        const icon = darkModeToggle.querySelector("i");
-        const text = darkModeToggle.querySelector("span");
+  document.addEventListener("DOMContentLoaded", function () {
+      const darkModeToggle = document.getElementById("dark-mode-toggle");
+      const body = document.body;
+      const icon = darkModeToggle.querySelector("i");
+      const text = darkModeToggle.querySelector("span");
 
-        // Check if dark mode is enabled in localStorage
-        if (localStorage.getItem("darkMode") === "enabled") {
-            body.classList.add("dark-mode");
-            darkModeToggle.classList.replace("btn-outline-dark", "btn-outline-light");
-            icon.classList.replace("fa-moon", "fa-sun");
-            text.textContent = "Light Mode";
-        }
-
+      // Check if dark mode is enabled in localStorage
+      if (localStorage.getItem("darkMode") === "enabled") {
+          body.classList.add("dark-mode");
+          darkModeToggle.classList.replace("btn-outline-dark", "btn-outline-light");
+          icon.classList.replace("fa-moon", "fa-sun");
+          text.textContent = "Light Mode";
+      }
+  
     darkModeToggle.addEventListener("click", function () {
-        body.classList.toggle("dark-mode");
+      body.classList.toggle("dark-mode");
+          // Save user preference
+          if (body.classList.contains("dark-mode")) {
+              localStorage.setItem("darkMode", "enabled");
+              darkModeToggle.classList.replace("btn-outline-dark", "btn-outline-light");
+              icon.classList.replace("fa-moon", "fa-sun");
+              text.textContent = "Light Mode";
+          } else {
+              localStorage.setItem("darkMode", "disabled");
+              darkModeToggle.classList.replace("btn-outline-light", "btn-outline-dark");
+              icon.classList.replace("fa-sun", "fa-moon");
+              text.textContent = "Dark Mode";
+          }
+      });
+  });
+  
 
-            // Save user preference
-            if (body.classList.contains("dark-mode")) {
-                localStorage.setItem("darkMode", "enabled");
-                darkModeToggle.classList.replace("btn-outline-dark", "btn-outline-light");
-                icon.classList.replace("fa-moon", "fa-sun");
-                text.textContent = "Light Mode";
-            } else {
-                localStorage.setItem("darkMode", "disabled");
-                darkModeToggle.classList.replace("btn-outline-light", "btn-outline-dark");
-                icon.classList.replace("fa-sun", "fa-moon");
-                text.textContent = "Dark Mode";
-            }
-        });
-    });
-    
+
+var tl = gsap.timeline()
+
+tl.from('.logo-animation', {
+    y: -30,
+    opacity: 0,
+    duration: 1,
+    delay: 1 
+});
+
+tl.from('.nav-animation', {
+    y: -30,
+    opacity: 0,
+    duration: 0.5,
+    delay: 0.1,
+    stagger: 0.5
+});
+
+tl.from('.cards-animation', {
+    y: 20,
+    opacity: 0,
+    duration: 3.5,
+    scale: 0.5,
+});

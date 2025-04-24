@@ -41,7 +41,8 @@ form.addEventListener("submit", async (e) => {
             purya: purya,
             bottle: bottle,
             majoon: majoon,
-            updatedAt: new Date(),
+            // updatedAt: new Date(), // ❌ this is not used in sorting
+            createdAt: new Date(),  // ✅ This will update the position on home page
         });
         console.log("Post updated!");
     } else {
@@ -105,7 +106,6 @@ async function loginUserData(uid) {
     console.error("Error fetching user blogs: ", e);
   }
 }
-
 
 
 
@@ -230,4 +230,64 @@ async function handleDelete(e) {
     console.error("Error deleting document: ", e);
   }
 }
+
+
+
+gsap.to("#page-head", {
+    // x: 440,
+    duration: 1.8,
+    delay: 4,
+    rotate: 180,
+    repeat: 1,
+    yoyo: true,
+})
+
+var tl = gsap.timeline()
+
+tl.from("#first-head", {
+    y: -30,
+    opacity: 0,
+    duration: 3,
+    delay: 1,
+    scale: 0.5,
+})
+
+
+const fields = [
+  { input: '.nameInput', label: '.nameLabel' },
+  { input: '.ageInput', label: '.ageLabel' },
+  { input: '.madicinesInput', label: '.madicinesLabel' },
+  { input: '.dayInput', label: '.dayLabel' },
+  { input: '.puryaInput', label: '.puryaLabel' },
+  { input: '.bottleInput', label: '.bottleLabel' },
+  { input: '.majoonInput', label: '.majoonLabel' },
+  { input: '.priceInput', label: '.priceLabel' },
+  { input: '.numberInput', label: '.numberLabel' }
+];
+
+fields.forEach(({ input, label }) => {
+  const inputEl = document.querySelector(input);
+  const labelEl = document.querySelector(label);
+
+    if (inputEl && labelEl) {
+      // On focus, start animation
+      inputEl.addEventListener('focus', () => {
+      labelEl.classList.remove('animate__animated', 'animate__bounceIn', 'animate__infinite', 'animate__slow');
+      void labelEl.offsetWidth;
+      labelEl.classList.add('animate__animated', 'animate__bounceIn', 'animate__infinite',
+      'animate__slow');
+    });
+
+    // On input, check if user typed anything
+    inputEl.addEventListener('input', () => {
+      if (inputEl.value.trim().length > 0) {
+          // Stop animation if there's input
+          labelEl.classList.remove('animate__bounceIn', 'animate__infinite', 'animate__slow');
+      } else {
+          // Add again if input is cleared
+          labelEl.classList.add('animate__bounceIn', 'animate__infinite', 'animate__slow');
+      }
+    });
+  }
+});
 
