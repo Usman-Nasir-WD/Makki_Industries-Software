@@ -233,24 +233,24 @@ async function handleDelete(e) {
 
 
 
-gsap.to("#page-head", {
-    // x: 440,
-    duration: 1.8,
-    delay: 4,
-    rotate: 180,
-    repeat: 1,
-    yoyo: true,
-})
+// gsap.to("#page-head", {
+//     // x: 440,
+//     duration: 1.8,
+//     delay: 4,
+//     rotate: 180,
+//     repeat: 1,
+//     yoyo: true,
+// })
 
-var tl = gsap.timeline()
+// var tl = gsap.timeline()
 
-tl.from("#first-head", {
-    y: -30,
-    opacity: 0,
-    duration: 3,
-    delay: 1,
-    scale: 0.5,
-})
+// tl.from("#first-head", {
+//     y: 40,
+//     opacity: 0,
+//     duration: 3,
+//     delay: 1,
+//     scale: 0.5,
+// })
 
 
 const fields = [

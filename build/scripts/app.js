@@ -220,20 +220,20 @@ tl.from('.logo-animation', {
     y: -30,
     opacity: 0,
     duration: 1,
-    delay: 1 
+    delay: 1.5
 });
 
 tl.from('.nav-animation', {
     y: -30,
     opacity: 0,
-    duration: 0.5,
-    delay: 0.1,
-    stagger: 0.5
+    duration: 1,
+    // delay: 0.5,
+    // stagger: 0.5
 });
 
 tl.from('.cards-animation', {
-    y: 20,
+    y: 30,
     opacity: 0,
-    duration: 3.5,
-    scale: 0.5,
+    duration: 2,
+    scale: 0.6,
 });
